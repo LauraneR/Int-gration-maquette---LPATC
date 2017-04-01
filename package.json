@@ -1,0 +1,24 @@
+{
+  "name": "int_lpatc",
+  "version": "1.0.0",
+  "description": "Excercice d'intégration pour la licence LPATC de Strasbourg",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss   public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LauraneR/Int-gration-maquette---LPATC.git"
+  },
+  "author": "Laurane Richter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LauraneR/Int-gration-maquette---LPATC/issues"
+  },
+  "homepage": "https://github.com/LauraneR/Int-gration-maquette---LPATC/public/index.html",
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0"
+  }
+}
