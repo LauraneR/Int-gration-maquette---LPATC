@@ -1,0 +1,26 @@
+.navigation {
+	.container-navigation {
+		@include container;
+		margin:auto;
+		.container-logo {
+			@include span(3,false);
+		}
+		.container-header-nav {
+			@include span(7,false);
+		}
+		.search-nav {
+			@include span(1,false);
+		}
+		.more-menu {
+			@include span(1,false);
+		}
+	}
+	.content-search-nav {
+		@include col-container;
+		margin:auto;
+	}
+	.content-more-menu {
+		@include col-container;
+		margin:auto;
+	}
+}

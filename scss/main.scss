@@ -1,4 +1,4 @@
-@import "guff"
+@import "../bower_components/guff/guff";
 
 //=========================== SETTINGS GUFF
 // Set base font size
@@ -8,16 +8,26 @@ $line-height-base: 26px !default;
 // Vertical rhythm ratio
 $type-rhythm-ratio: 1.14 !default;
 // Desktop Media Query
-$desktop: "(min-width: 1024px)" !default;
-// Tablet Media Query
-$tablet: "(min-width: 768px) and (max-width: 1023px)" !default;
-// Mobile Media Query
-$mobile: "(max-width: 767px)" !default;
+$desktop: "(min-width: 1400px)";
 // Set Grid Column Count
 $grid-columns: 12 !default;
-// Set Grid Gutter (percentage)
-$grid-gutter: 4 !default;
+// Set Grid Gutter (as px)
+$grid-gutter: 35px;
 // Set Grid Padding (as px)
-$grid-padding: 20px !default;
+$grid-padding: 15px;
 // Set Grid Max Width (as px)
-$grid-max-width: 1024px !default;
+$grid-max-width: 1280px;
+
+
+//====================== BASE
+@import "base/color";
+//====================== COMPONENTS
+@import "components/buttons";
+@import "components/input";
+//====================== HELPERS
+@import "helpers/mixins";
+//====================== LAYOUT
+@import "layout/header";
+
+
+
