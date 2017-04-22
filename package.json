@@ -4,8 +4,8 @@
   "description": "Excercice d'intégration pour la licence LPATC de Strasbourg",
   "main": "index.html",
   "scripts": {
-    "build-css": "node-sass --include-path scss scss/main.scss   public/asset/css/main.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "build-css": "node-sass --include-path scss scss/main.scss public/asset/css/main.css",
+    "watch-css": "node-sass -w scss/ -o public/asset/css/"
   },
   "repository": {
     "type": "git",

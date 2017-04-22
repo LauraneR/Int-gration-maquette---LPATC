@@ -19,15 +19,14 @@ $grid-padding: 15px;
 $grid-max-width: 1280px;
 
 
+//====================== HELPERS
+@import "helpers/mixins";
 //====================== BASE
 @import "base/color";
+@import "base/reset";
 //====================== COMPONENTS
 @import "components/buttons";
 @import "components/input";
-//====================== HELPERS
-@import "helpers/mixins";
+@import "components/search-adress";
 //====================== LAYOUT
 @import "layout/header";
-
-
-

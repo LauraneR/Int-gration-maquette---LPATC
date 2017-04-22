@@ -1,0 +1,19 @@
+.content-search-nav {
+	background-color: $dark-red;
+	.search-nav-title {
+		color: $light-greywhite-two;
+  		font-size: 25px !important;
+  		text-align: center !important;
+  		padding-top: 30px;
+	}
+	form {
+		text-align: center !important;
+		padding-bottom: 40px;
+		.search-more {
+			display: inline-block;
+			color: $white;
+			text-decoration: underline;
+			padding-left: 30px;
+		}
+	}
+}

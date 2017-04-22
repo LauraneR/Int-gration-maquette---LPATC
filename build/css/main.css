@@ -1,0 +1,55 @@
+.navigation .container-navigation:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.navigation .container-navigation {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto; }
+  .navigation .container-navigation .container-logo {
+    width: 25%;
+    float: left; }
+    .navigation .container-navigation .container-logo .archi-wiki-logo {
+      max-width: 198.9px; }
+  .navigation .container-navigation .container-header-nav {
+    width: 58.33333%;
+    float: left; }
+    .navigation .container-navigation .container-header-nav .header-nav {
+      list-style: none; }
+  .navigation .container-navigation .search-nav {
+    width: 8.33333%;
+    float: left; }
+  .navigation .container-navigation .more-menu {
+    width: 8.33333%;
+    float: left; }
+
+.navigation .content-search-nav {
+  width: 100%;
+  text-align: justify !important;
+  text-justify: distribute-all-lines;
+  font-size: 0 !important;
+  max-width: 1280px;
+  margin: auto; }
+  .navigation .content-search-nav > * {
+    text-align: left;
+    font-size: 1rem; }
+  .navigation .content-search-nav:after {
+    content: '';
+    display: inline-block;
+    width: 100%; }
+
+.navigation .content-more-menu {
+  width: 100%;
+  text-align: justify !important;
+  text-justify: distribute-all-lines;
+  font-size: 0 !important;
+  max-width: 1280px;
+  margin: auto; }
+  .navigation .content-more-menu > * {
+    text-align: left;
+    font-size: 1rem; }
+  .navigation .content-more-menu:after {
+    content: '';
+    display: inline-block;
+    width: 100%; }

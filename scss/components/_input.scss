@@ -1,0 +1,24 @@
+input {
+	width: 562px;
+	height: 43.3px;
+	border: solid 2px $dark-peach;
+	background-color: $white;
+	@include placeholder {
+	    font-style:italic;
+	    color: $more-dark-grey;
+	    padding-left: 22px;
+	}
+}
+button {
+	position: relative;
+    top: 4px;
+	width: 62px;
+	height: 47px;
+	border: solid 2px $dark-peach;
+	background-color: $white;
+	margin-left: -6px;
+	.fa-search {
+		font-size: 25px;
+		color:$charcoal-grey;
+	}
+}
