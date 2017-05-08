@@ -1,0 +1,23 @@
+@mixin fontTitle1 {
+	font-size:31px;
+	line-height: 40px;
+	color: $charcoal-grey;
+}
+
+@mixin fontTitle2 {
+	font-size:25px;
+	line-height: 33px;
+	color: $charcoal-grey;
+}
+
+@mixin fontTitle3 {
+	font-size:20px;
+	line-height: 36px;
+	color: $charcoal-grey;
+}
+
+@mixin fontP1 {
+	font-size:16px;
+	line-height: 24px;
+	color: $black;
+}

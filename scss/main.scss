@@ -23,10 +23,14 @@ $grid-max-width: 1280px;
 @import "helpers/mixins";
 //====================== BASE
 @import "base/color";
+@import "base/typo";
 @import "base/reset";
 //====================== COMPONENTS
 @import "components/buttons";
 @import "components/input";
 @import "components/search-adress";
+@import "components/article";
 //====================== LAYOUT
 @import "layout/header";
+//====================== PAGE
+@import "page/home";

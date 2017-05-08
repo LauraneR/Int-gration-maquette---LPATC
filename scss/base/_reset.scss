@@ -1,11 +1,10 @@
+body {
+	background-color: $white;
+}
 ul {
 	list-style: none;
 	padding: 0;
 }
-a {
-	text-decoration: none;
-}
-
 * {
 	font-size: 16px;
 	font-family: OpenSans;
@@ -13,5 +12,26 @@ a {
 
 h1, h2, h3, h4, h5 {
 	font-family: Montserrat;
-	font-weight: bold;
+	font-weight: 700;
+	margin: 0;
+}
+
+a {
+	font-size: 14px;
+	line-height: 24px;
+	text-decoration: underline;
+	color: $dark-red;
+}
+h1, h3 {
+ @include fontTitle2;
+}
+h2 {
+ @include fontTitle1;
+}
+h4 {
+ @include fontTitle3;
+}
+p {
+ @include fontP1;
+ margin: 0;
 }

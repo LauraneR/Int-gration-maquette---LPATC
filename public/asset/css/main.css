@@ -3,12 +3,12 @@
   display: table;
   clear: both; }
 
+body {
+  background-color: #fafafa; }
+
 ul {
   list-style: none;
   padding: 0; }
-
-a {
-  text-decoration: none; }
 
 * {
   font-size: 16px;
@@ -16,7 +16,35 @@ a {
 
 h1, h2, h3, h4, h5 {
   font-family: Montserrat;
-  font-weight: bold; }
+  font-weight: 700;
+  margin: 0; }
+
+a {
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: underline;
+  color: #a65447; }
+
+h1, h3 {
+  font-size: 25px;
+  line-height: 33px;
+  color: #34414a; }
+
+h2 {
+  font-size: 31px;
+  line-height: 40px;
+  color: #34414a; }
+
+h4 {
+  font-size: 20px;
+  line-height: 36px;
+  color: #34414a; }
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #222a30;
+  margin: 0; }
 
 input {
   width: 562px;
@@ -42,9 +70,9 @@ input {
 
 button {
   position: relative;
-  top: 4px;
+  top: 3.2px;
   width: 62px;
-  height: 47px;
+  height: 49.3px;
   border: solid 2px #d96e5d;
   background-color: #fafafa;
   margin-left: -6px; }
@@ -58,7 +86,8 @@ button {
     color: #ebebeb;
     font-size: 25px !important;
     text-align: center !important;
-    padding-top: 30px; }
+    padding-top: 30px;
+    margin-bottom: 10px; }
   .content-search-nav form {
     text-align: center !important;
     padding-bottom: 40px; }
@@ -67,6 +96,39 @@ button {
       color: #fafafa;
       text-decoration: underline;
       padding-left: 30px; }
+
+.last-new-article {
+  width: 58.33333%;
+  float: left;
+  background-color: white;
+  padding: 30px 0; }
+  .last-new-article .last-new-title {
+    padding: 0 30px;
+    margin-bottom: 30px; }
+  .last-new-article .last-new-wrap {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .last-new-article .last-new-wrap .last-new-img {
+      width: 31.28255%;
+      vertical-align: top;
+      display: inline-block;
+      background: url("../img/livres.jpg");
+      background-size: cover; }
+    .last-new-article .last-new-wrap .last-new-content {
+      width: 64.61589%;
+      vertical-align: top;
+      display: inline-block;
+      padding-top: 8px; }
+      .last-new-article .last-new-wrap .last-new-content p {
+        padding: 0 30px; }
+      .last-new-article .last-new-wrap .last-new-content .wrap-link {
+        padding: 15px 30px 40px 30px; }
+        .last-new-article .last-new-wrap .last-new-content .wrap-link .to-right {
+          float: right; }
 
 .navigation .container-navigation {
   width: 100%;
@@ -189,8 +251,84 @@ button {
       padding-top: 10px; }
   .navigation .content-more-menu h4 {
     font-size: 20px;
-    line-height: 1.3; }
+    line-height: 1.3;
+    color: #fafafa; }
   .navigation .content-more-menu .item a {
     color: #fafafa;
     font-size: 18px;
     line-height: 1.5; }
+
+.navigation a {
+  text-decoration: none; }
+
+#page-container {
+  width: 100%;
+  text-align: justify !important;
+  text-justify: distribute-all-lines;
+  font-size: 0 !important;
+  max-width: 1280px;
+  margin: auto; }
+  #page-container > * {
+    text-align: left;
+    font-size: 1rem; }
+  #page-container:after {
+    content: '';
+    display: inline-block;
+    width: 100%; }
+  #page-container #intro {
+    background-color: white; }
+    #page-container #intro .backgroung-img-intro {
+      width: 56.28255%;
+      vertical-align: top;
+      display: inline-block;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -moz-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
+      #page-container #intro .backgroung-img-intro img {
+        width: 100%; }
+    #page-container #intro .intro-wrap-content {
+      width: 39.61589%;
+      vertical-align: top;
+      display: inline-block; }
+      #page-container #intro .intro-wrap-content .title-intro-content {
+        background-color: white;
+        position: relative;
+        display: inline-block;
+        left: -110px;
+        margin-right: -110px;
+        padding: 30px; }
+        #page-container #intro .intro-wrap-content .title-intro-content .sub-title {
+          font-size: 14px;
+          color: #34414a;
+          font-family: Montserrat;
+          font-weight: 700; }
+      #page-container #intro .intro-wrap-content .intro-content {
+        padding-left: 30px; }
+  #page-container .top-articles {
+    /*.last-new-article {
+			@include span(7,false);
+			padding: 30px 0;
+			.title-last-new {
+				padding:0 30px;
+			}
+			.article-content {
+
+			}
+		}*/ }
+    #page-container .top-articles .about-us {
+      width: 41.66667%;
+      float: left;
+      padding: 30px 0;
+      background-color: #ebebeb; }
+      #page-container .top-articles .about-us .title-about-us {
+        margin-bottom: 10px;
+        padding: 0 30px; }
+      #page-container .top-articles .about-us .content-about-us {
+        margin-bottom: 10px;
+        padding: 0 30px; }
+        #page-container .top-articles .about-us .content-about-us p {
+          padding-bottom: 10px; }
+      #page-container .top-articles .about-us .link-subscribe {
+        padding: 0 30px; }

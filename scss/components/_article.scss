@@ -1,0 +1,31 @@
+.last-new-article {
+	@include span(7,false);
+	background-color: white;
+	padding: 30px 0;
+	.last-new-title {
+		padding:0 30px;
+		margin-bottom: 30px;
+	}
+	.last-new-wrap {
+		width: 100%;
+		@include flexbox;
+		.last-new-img {
+			@include col(4);
+			background: url('../img/livres.jpg');
+			background-size: cover;
+		}
+		.last-new-content {
+			@include col(8);
+			padding-top: 8px;
+			p {
+				padding:0 30px;
+			}
+			.wrap-link {
+				padding:15px 30px 40px 30px;
+				.to-right {
+					float: right;
+				}
+			}
+		}
+	}
+}
