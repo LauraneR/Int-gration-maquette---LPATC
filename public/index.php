@@ -115,19 +115,68 @@
 				</div>
 			</div>
 		</section>
-		<section class="all-article">
-			<h2>Dernières modifications</h2>
+		<section class="all-article" aria-labelledby="all-article-title">
+			<h2 id="all-article-title">Dernières modifications</h2>
 			<?php for ($i = 0; $i < 5; ++$i): ?>
 			<article>
-				<div class="">
-					
+				<div class="article">
+					<div class="article-img"></div>
+					<div class="article-contain">
+						<h3 class="article-title">36 rue Aubry-et-Rau</h3>
+						<div class="breadcrumb"><a href="#">France</a> > <a href="#">Strasbourg</a></div>
+						<div class="article-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat urna ut augue mattis, vel interdum tortor congue. Nam nec eros hendrerit, ullamcorper lacus ut, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris non dolor eleifend, vulputate nisi vitae, posuere eros.</p>
+						</div>
+						<a href="#" class="article-know-more">Consulter la fiche ></a>
+					</div>
 				</div>
 			</article>
 			<?php endfor; ?>
 		</section>
-		<aside class="all-comment">
-			<h2>Derniers commentaires</h2>
+		<aside class="all-comment" aria-labelledby="all-comment-title">
+			<h2 id="all-comment-title">Derniers commentaires</h2>
+			<?php for ($i = 0; $i < 5; ++$i): ?>
+			<div class="comment">
+				<h3 class="comment-title">36 rue Aubry-et-Rau</h3>
+				<div class="breadcrumb"><a href="#">France</a> > <a href="#">Strasbourg</a></div>
+				<div class="comment-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat urna ut augue mattis, vel interdum tortor congue. Nam nec eros hendrerit, ullamcorper lacus ut, lobortis nisi…</p>
+				</div>
+				<a href="#" class="comment-know-more">Consulter le commentaire ></a>
+			</div>
+			<?php endfor; ?>
 		</aside>
+		<section class="btn-see-more">
+			<div class="wrap-more-article">
+				<button class="more-article">Toutes les dernières modifications</button>
+			</div>
+			<div class="wrap-more-comment">
+				<button class="more-comment">Tous les derniers commentaires</button>
+			</div>
+		</section>
 	</div>
+	<footer id="page-footer">
+		<div class="wrap-footer">
+			<div class="footer-menu">
+				<img class="archi-wiki-logo-white" src="asset/img/logo-archiwiki-white.png" srcset="asset/img/logo-archiwiki-white@2x.png 2x, asset/img/logo-archiwiki-white.png 1x" alt="Logo de l'entreprise Archi-Wiki en blanc">
+				<nav class="container-footer-nav">
+					<ul class="footer-nav">
+						<li class="item"><a href="#">Nous contacter</a></li>
+						<li class="item"><a href="#">Foire aux questions</a></li>
+						<li class="item"><a href="#">Mentions légales</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer-partner">
+				<h5>Archi-Wiki est un projet financé et soutenu par :</h5>
+				<p>Prévoir logo des partenaires, en défausse</p>
+			</div>
+			<div class="footer-social-networks">
+				<a href="#" class="networks-twiter link-network"><i class="fa fa-twitter" aria-hidden="true"></i> @archi-strasbourg</a>
+				<a href="#" class="networks-facebook link-network"><i class="fa fa-facebook" aria-hidden="true"></i> Archi.Strasbourg</a>
+				<a href="#" class="networks-instagram link-network"><i class="fa fa-instagram" aria-hidden="true"></i> archi_strasbourg</a>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

@@ -29,3 +29,107 @@
 		}
 	}
 }
+
+.all-article {
+	@include span(8,false);
+	#all-article-title {margin-bottom: 24px;}
+	article {
+		@include span(6,false);
+		margin-bottom: 30px;
+		.article {
+			margin-right: 30px;
+			background-color: white;
+			.article-img {
+				display: inline-block;
+				background:url('../img/immeuble.jpg');
+				background-size: cover;
+				background-position: center center;
+				min-height: 250px;
+				width: 100%;
+				position: relative;
+				&:before {
+					content:'';
+					position: absolute;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 20px 18px 20px;
+					border-color: transparent transparent #ffffff transparent;
+					bottom: 0;
+					left: 25px;
+				}
+			}
+			.article-contain {
+				padding: 30px;
+				.article-title {
+					margin-bottom: 5px;
+				}
+				.article-content {
+					padding-top: 20px;
+					padding-bottom: 15px;
+				}
+			}
+		}
+	}
+	article:nth-child(2) {
+		@include span(12,false);
+		.article {
+			@include flexbox;
+			.article-img {
+				@include span(6,false);
+				&:before {
+					border-width: 20px 18px 20px 0;
+					border-color: transparent #ffffff transparent transparent;
+					top: 25px;
+					right: 0px;
+					left: auto;
+				}
+			}
+			.article-contain {
+				@include span(6,false);
+			}
+		}
+	}
+}
+
+.all-comment {
+	@include span(4,false);
+	#all-comment-title {margin-bottom: 24px;}
+	.comment {
+		padding: 30px;
+		margin-bottom: 30px;
+		position: relative;
+		&:after{
+			content:'';
+			position: absolute;
+			bottom: 0;
+			top: 0;
+			right: 0;
+			left: 0;
+			background-color: white;
+			z-index: -2;
+		}
+		&:before{
+			content:'';
+			position: absolute;
+			width: 150px;
+			height: 150px;
+			bottom: 10px;
+    		left: 20px;
+    		opacity: 0.45;
+			background:url('../img/com-icon.png');
+			background-size: cover;
+			background-position: center center;
+			z-index: -1;
+			@include transform(rotate(-5deg));
+		}
+		.comment-title {
+			margin-bottom: 5px;
+		}
+		.comment-content {
+			padding-top: 20px;
+			padding-bottom: 15px;
+			font-style: italic;
+		}
+	}
+}

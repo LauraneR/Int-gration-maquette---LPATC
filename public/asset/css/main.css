@@ -1,4 +1,4 @@
-.navigation .container-navigation:after {
+.navigation .container-navigation:after, #page-footer .wrap-footer:after {
   content: "";
   display: table;
   clear: both; }
@@ -45,6 +45,18 @@ p {
   line-height: 24px;
   color: #222a30;
   margin: 0; }
+
+.more-article {
+  width: 390px;
+  height: 48px;
+  border: 2px solid #222a30;
+  text-transform: uppercase; }
+
+.more-comment {
+  width: 360px;
+  height: 48px;
+  border: 2px solid #222a30;
+  text-transform: uppercase; }
 
 input {
   width: 562px;
@@ -129,6 +141,107 @@ button {
         padding: 15px 30px 40px 30px; }
         .last-new-article .last-new-wrap .last-new-content .wrap-link .to-right {
           float: right; }
+
+.all-article {
+  width: 66.66667%;
+  float: left; }
+  .all-article #all-article-title {
+    margin-bottom: 24px; }
+  .all-article article {
+    width: 50%;
+    float: left;
+    margin-bottom: 30px; }
+    .all-article article .article {
+      margin-right: 30px;
+      background-color: white; }
+      .all-article article .article .article-img {
+        display: inline-block;
+        background: url("../img/immeuble.jpg");
+        background-size: cover;
+        background-position: center center;
+        min-height: 250px;
+        width: 100%;
+        position: relative; }
+        .all-article article .article .article-img:before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 20px 18px 20px;
+          border-color: transparent transparent #ffffff transparent;
+          bottom: 0;
+          left: 25px; }
+      .all-article article .article .article-contain {
+        padding: 30px; }
+        .all-article article .article .article-contain .article-title {
+          margin-bottom: 5px; }
+        .all-article article .article .article-contain .article-content {
+          padding-top: 20px;
+          padding-bottom: 15px; }
+  .all-article article:nth-child(2) {
+    width: 100%;
+    float: left; }
+    .all-article article:nth-child(2) .article {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .all-article article:nth-child(2) .article .article-img {
+        width: 50%;
+        float: left; }
+        .all-article article:nth-child(2) .article .article-img:before {
+          border-width: 20px 18px 20px 0;
+          border-color: transparent #ffffff transparent transparent;
+          top: 25px;
+          right: 0px;
+          left: auto; }
+      .all-article article:nth-child(2) .article .article-contain {
+        width: 50%;
+        float: left; }
+
+.all-comment {
+  width: 33.33333%;
+  float: left; }
+  .all-comment #all-comment-title {
+    margin-bottom: 24px; }
+  .all-comment .comment {
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative; }
+    .all-comment .comment:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: white;
+      z-index: -2; }
+    .all-comment .comment:before {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      bottom: 10px;
+      left: 20px;
+      opacity: 0.45;
+      background: url("../img/com-icon.png");
+      background-size: cover;
+      background-position: center center;
+      z-index: -1;
+      -moz-transform: rotate(-5deg);
+      -o-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      -webkit-transform: rotate(-5deg);
+      transform: rotate(-5deg); }
+    .all-comment .comment .comment-title {
+      margin-bottom: 5px; }
+    .all-comment .comment .comment-content {
+      padding-top: 20px;
+      padding-bottom: 15px;
+      font-style: italic; }
 
 .navigation .container-navigation {
   width: 100%;
@@ -261,6 +374,66 @@ button {
 .navigation a {
   text-decoration: none; }
 
+#page-footer {
+  background-color: #34414a;
+  color: white;
+  display: inline-block;
+  width: 100%; }
+  #page-footer .wrap-footer {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto; }
+    #page-footer .wrap-footer .footer-menu {
+      width: 33.33333%;
+      float: left;
+      text-align: center; }
+      #page-footer .wrap-footer .footer-menu .archi-wiki-logo-white {
+        max-width: 190px;
+        margin-top: 30px;
+        margin-bottom: 30px; }
+      #page-footer .wrap-footer .footer-menu .footer-nav {
+        margin: 0; }
+        #page-footer .wrap-footer .footer-menu .footer-nav .item {
+          padding-bottom: 15px; }
+          #page-footer .wrap-footer .footer-menu .footer-nav .item a {
+            font-size: 14px;
+            line-height: 1.43;
+            text-decoration: none;
+            color: #fafafa; }
+    #page-footer .wrap-footer .footer-partner {
+      width: 33.33333%;
+      float: left;
+      text-align: center; }
+      #page-footer .wrap-footer .footer-partner h5 {
+        font-size: 16px;
+        line-height: 1.31;
+        margin: 70px 0; }
+      #page-footer .wrap-footer .footer-partner p {
+        color: white;
+        font-style: italic; }
+    #page-footer .wrap-footer .footer-social-networks {
+      width: 33.33333%;
+      float: left;
+      text-align: center;
+      margin-top: 40px; }
+      #page-footer .wrap-footer .footer-social-networks .link-network {
+        width: 211px;
+        border: 2px solid white;
+        text-decoration: none;
+        display: block;
+        margin: auto;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fafafa;
+        padding-top: 15px;
+        padding-bottom: 18px;
+        margin-bottom: 30px; }
+        #page-footer .wrap-footer .footer-social-networks .link-network .fa {
+          font-size: 25px;
+          padding-right: 8px;
+          top: 4px;
+          position: relative; }
+
 #page-container {
   width: 100%;
   text-align: justify !important;
@@ -307,16 +480,8 @@ button {
       #page-container #intro .intro-wrap-content .intro-content {
         padding-left: 30px; }
   #page-container .top-articles {
-    /*.last-new-article {
-			@include span(7,false);
-			padding: 30px 0;
-			.title-last-new {
-				padding:0 30px;
-			}
-			.article-content {
-
-			}
-		}*/ }
+    display: inline-block;
+    padding-bottom: 50px; }
     #page-container .top-articles .about-us {
       width: 41.66667%;
       float: left;
@@ -332,3 +497,16 @@ button {
           padding-bottom: 10px; }
       #page-container .top-articles .about-us .link-subscribe {
         padding: 0 30px; }
+  #page-container .btn-see-more {
+    width: 100%;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 60px; }
+    #page-container .btn-see-more .wrap-more-article {
+      width: 66.66667%;
+      float: left;
+      text-align: center; }
+    #page-container .btn-see-more .wrap-more-comment {
+      width: 33.33333%;
+      float: left;
+      text-align: center; }
