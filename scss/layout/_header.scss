@@ -1,7 +1,11 @@
 .navigation {
+	position: relative;
 	.container-navigation {
 		@include container;
 		margin:auto;
+		background-color: $white;
+		z-index: 60;
+		position: relative;
 		.container-logo {
 			@include span(3,false);
 			max-width: 260px;
@@ -56,14 +60,16 @@
 			width: 133px;
 			height: 150px;
 			display: flex;
-			p {
+			flex-direction: column;
+			.show-more-menu {
 				margin: auto;
+				margin-top: -20px;
 				font-size: 18px;
 				text-transform: uppercase;
 			}
 			&.active {
 				background-color: $dark-grey;
-				p {
+				.show-more-menu {
 					color: $white;
 				}
 			}
@@ -72,9 +78,14 @@
 	.content-search-nav {
 		@include col-container;
 		margin:auto;
-		display: none;
-		bottom: 26px;
-		position: relative;
+		position: absolute;
+	    top: 150px;
+	    right: 0;
+	    left: 0;
+	    visibility: hidden;
+	    transition: all 0.5s ease;
+	    transform: translateY(-275px);
+	    z-index: 50;
 		&.show {
 			display: block;
 		}
@@ -84,9 +95,15 @@
 		margin:auto;
 		background-color: $dark-grey;
 		color: $white;
-		display: none;
-		position: relative;
-    	bottom: 1px;
+		position: absolute;
+	    top: 150px;
+	    right: 0;
+	    left: 0;
+	    visibility: hidden;
+	    transition: all 0.5s ease;
+	    transform: translateY(-275px);
+	    z-index: 50;
+    	padding: 40px 0;
 		&.show {
 			display: block;
 		}
@@ -101,12 +118,31 @@
 		}
 		.connect {
 			@include span(2,false);
+			text-align: center;
 			a {
 				display: block;
 				text-align: center;
 				color: $white;
 				font-size: 18px;
 				padding-top: 10px;
+			}
+			.fa-user {
+				border-radius: 50%;
+				border: 2px solid white;
+				width: 120px;
+				height: 120px;
+				color: $dark-grey;
+				position: relative;
+				background-color: $light-greywhite-two;
+				overflow: hidden;
+				&:before {
+					position:absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					bottom: -12px;
+    				font-size: 120px;
+				}
 			}
 		}
 		h4 {

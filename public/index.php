@@ -29,7 +29,9 @@
 				<i class="fa fa-search" aria-hidden="true"></i>
 			</div>
 			<div class="more-menu">
-				<div class="burger-menu"></div>
+				<div class="burger-menu">
+				  <div class="burger"></div>  
+				</div>
 				<p class="show-more-menu">Menu</p>
 			</div>
 		</div>
@@ -148,10 +150,10 @@
 		</aside>
 		<section class="btn-see-more">
 			<div class="wrap-more-article">
-				<button class="more-article">Toutes les dernières modifications</button>
+				<button class="more-article animated-button">Toutes les dernières modifications</button>
 			</div>
 			<div class="wrap-more-comment">
-				<button class="more-comment">Tous les derniers commentaires</button>
+				<button class="more-comment animated-button">Tous les derniers commentaires</button>
 			</div>
 		</section>
 	</div>
@@ -172,9 +174,9 @@
 				<p>Prévoir logo des partenaires, en défausse</p>
 			</div>
 			<div class="footer-social-networks">
-				<a href="#" class="networks-twiter link-network"><i class="fa fa-twitter" aria-hidden="true"></i> @archi-strasbourg</a>
-				<a href="#" class="networks-facebook link-network"><i class="fa fa-facebook" aria-hidden="true"></i> Archi.Strasbourg</a>
-				<a href="#" class="networks-instagram link-network"><i class="fa fa-instagram" aria-hidden="true"></i> archi_strasbourg</a>
+				<a href="#" class=" networks-twiter link-network"><i class="fa fa-twitter" aria-hidden="true"></i> @archi-strasbourg</a>
+				<a href="#" class=" networks-facebook link-network"><i class="fa fa-facebook" aria-hidden="true"></i> Archi.Strasbourg</a>
+				<a href="#" class=" networks-instagram link-network"><i class="fa fa-instagram" aria-hidden="true"></i> archi_strasbourg</a>
 			</div>
 		</div>
 	</footer>
