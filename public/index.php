@@ -13,7 +13,8 @@
 	<header class="navigation">
 		<div class="container-navigation">
 			<div class="container-logo">
-				<img class="archi-wiki-logo" src="asset/img/logo-archiwiki.png" srcset="asset/img/logo-archiwiki@2x.png 2x, asset/img/logo-archiwiki.png 1x" alt="Logo de l'entreprise Archi-Wiki">
+				<img class="archi-wiki-logo logo-mobile" src="asset/img/logo-archiwiki-white.png" srcset="asset/img/logo-archiwiki-white@2x.png 2x, asset/img/logo-archiwiki-white.png 1x" alt="Logo de l'image-en-avantreprise Archi-Wiki en blanc">
+				<img class="archi-wiki-logo logo-desktop" src="asset/img/logo-archiwiki.png" srcset="asset/img/logo-archiwiki@2x.png 2x, asset/img/logo-archiwiki.png 1x" alt="Logo de l'entreprise Archi-Wiki">
 				<p class="legend-logo">Partageons la ville, ses bâtiments, ses lieux…</p>
 			</div>
 			<nav class="container-header-nav">
@@ -45,20 +46,26 @@
 		</div>
 		<div class="content-more-menu">
 			<nav>
-				<h4 id="association">L'association</h4>
-				<ul class="menu-association" aria-labelledby="association">
-					<li class="item"><a href="#">Devenir membre</a></li>
-					<li class="item"><a href="#">Faire un don</a></li>
-					<li class="item"><a href="#">Revue de presse</a></li>
-					<li class="item"><a href="#">Nos sources</a></li>
-					<li class="item"><a href="#">Nos donateurs</a></li>
-				</ul>
-			</nav>
-			<nav>
-				<h4 id="contribution">Contribuer au site</h4>
-				<ul class="menu-contribution" aria-labelledby="contribution">
-					<li class="item"><a href="#">Consulter l’historique de la page</a></li>
-					<li class="item"><a href="#">Aide à la contribution</a></li>
+				<ul>
+					<li id="association" class="item have-sub-menu"><a href="#">L'association</a>
+						<ul class="sub-menu sub-menu-association">
+							<li class="item"><a href="#">Devenir membre</a></li>
+							<li class="item"><a href="#">Faire un don</a></li>
+							<li class="item"><a href="#">Revue de presse</a></li>
+							<li class="item"><a href="#">Nos sources</a></li>
+							<li class="item"><a href="#">Nos donateurs</a></li>
+						</ul>
+					</li>
+					<li id="contribution" class="item have-sub-menu"><a href="#">Contribuer au site</a>
+						<ul class="sub-menu sub-menu-contribution">
+							<li class="item"><a href="#">Consulter l’historique de la page</a></li>
+							<li class="item"><a href="#">Aide à la contribution</a></li>
+						</ul>
+					</li>
+					<li class="item hidden-desktop"><a href="#">Open Data</a></li>
+					<li class="item hidden-desktop"><a href="#">Faire un don</a></li>
+					<li class="item hidden-desktop"><a href="#">English</a></li>
+					<li class="item hidden-desktop"><a href="#">Deutsch</a></li>
 				</ul>
 			</nav>
 			<div class="connect">
@@ -77,7 +84,12 @@
 				<div class="title-intro-content">
 					<span class="sub-title">Lumière sur ...</span>
 					<h1 id="title-intro">36 rue du vieux marché aux poissons</h1>
-					<div class="breadcrumb"><a href="#">France</a> > <a href="#">Strasbourg</a></div>
+					<div class="breadcrumb">
+						<ol>
+							<li><a href="#">France</a></li>
+							<li><a href="#">Strasbourg</a></li>
+						</ol>
+					</div>
 				</div>
 				<div class="intro-content">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat urna ut augue mattis, vel interdum tortor congue. Nam nec eros hendrerit, ullamcorper lacus ut, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris non dolor eleifend, vulputate nisi vitae, posuere eros. Praesent quis tempor felis, eu tristique ante. Maecenas dapibus nisi quis ante feugiat faucibus.</p>
@@ -125,7 +137,12 @@
 					<div class="article-img"></div>
 					<div class="article-contain">
 						<h3 class="article-title">36 rue Aubry-et-Rau</h3>
-						<div class="breadcrumb"><a href="#">France</a> > <a href="#">Strasbourg</a></div>
+						<div class="breadcrumb">						
+							<ol>
+								<li><a href="#">France</a></li>
+								<li><a href="#">Strasbourg</a></li>
+							</ol>
+						</div>
 						<div class="article-content">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat urna ut augue mattis, vel interdum tortor congue. Nam nec eros hendrerit, ullamcorper lacus ut, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris non dolor eleifend, vulputate nisi vitae, posuere eros.</p>
 						</div>
@@ -140,7 +157,12 @@
 			<?php for ($i = 0; $i < 5; ++$i): ?>
 			<div class="comment">
 				<h3 class="comment-title">36 rue Aubry-et-Rau</h3>
-				<div class="breadcrumb"><a href="#">France</a> > <a href="#">Strasbourg</a></div>
+				<div class="breadcrumb">						
+					<ol>
+						<li><a href="#">France</a></li>
+						<li><a href="#">Strasbourg</a></li>
+					</ol>
+				</div>
 				<div class="comment-content">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat urna ut augue mattis, vel interdum tortor congue. Nam nec eros hendrerit, ullamcorper lacus ut, lobortis nisi…</p>
 				</div>

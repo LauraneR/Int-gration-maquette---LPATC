@@ -47,7 +47,7 @@
 				min-height: 250px;
 				width: 100%;
 				position: relative;
-				&:before {
+				&::before {
 					content:'';
 					position: absolute;
 					width: 0;
@@ -77,7 +77,7 @@
 			@include flexbox;
 			.article-img {
 				@include span(6,false);
-				&:before {
+				&::before {
 					border-width: 20px 18px 20px 0;
 					border-color: transparent #ffffff transparent transparent;
 					top: 25px;
@@ -99,7 +99,7 @@
 		padding: 30px;
 		margin-bottom: 30px;
 		position: relative;
-		&:after{
+		&::after{
 			content:'';
 			position: absolute;
 			bottom: 0;
@@ -109,7 +109,7 @@
 			background-color: white;
 			z-index: -2;
 		}
-		&:before{
+		&::before{
 			content:'';
 			position: absolute;
 			width: 150px;

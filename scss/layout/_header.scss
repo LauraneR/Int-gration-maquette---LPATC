@@ -1,6 +1,9 @@
 .navigation {
 	position: relative;
 	.container-navigation {
+		@media (max-width: 767px){
+			background-color: $dark-grey;
+		}
 		@include container;
 		margin:auto;
 		background-color: $white;
@@ -8,20 +11,43 @@
 		position: relative;
 		.container-logo {
 			@include span(3,false);
+			height: 75px;
 			max-width: 260px;
-			height: 150px;
 			padding: 0 20px;
+			@media (min-width: 768px){
+				height: 150px;
+			}
 			.archi-wiki-logo {
-				max-width: 198.9px;
+				max-width: 112px;
 				width: 100%;
-				padding-top: 32px;
+				padding-top: 20px;
+				@media (min-width: 768px){
+					max-width: 198.9px;
+					padding-top: 32px;
+				}
+				&.logo-mobile {
+					@media (min-width: 768px){
+						display: none;
+					}
+				}
+				&.logo-desktop {
+					@media (max-width: 767px){
+						display: none;
+					}
+				}
 			}
 			.legend-logo {
   				font-size: 12px;
   				color: rgba(70, 87, 99, 0.85);
+  				@media (max-width: 767px){
+					display: none;
+				}
 			}
 		}
 		.container-header-nav {
+			@media (max-width: 767px){
+				display: none;
+			}
 			@include span(7,false);
 			max-width: 714px;
 			height: 150px;
@@ -40,6 +66,9 @@
 			}
 		}
 		.search-nav {
+			@media (max-width: 1023px){
+				display: none;
+			}
 			@include span(1,false);
 			width: 133px;
 			height: 150px;
@@ -56,16 +85,28 @@
 			}
 		}
 		.more-menu {
+			@media (max-width: 767px){
+				@include span(2,false);
+				@include offset(5);
+			}
 			@include span(1,false);
+			height: 75px;
 			width: 133px;
-			height: 150px;
 			display: flex;
 			flex-direction: column;
+			@media (min-width: 768px){
+				height: 150px;
+			}
 			.show-more-menu {
 				margin: auto;
 				margin-top: -20px;
-				font-size: 18px;
+				font-size: 10px;
 				text-transform: uppercase;
+				color: $white;
+				@media (min-width: 768px){
+					font-size: 18px;
+					color: $black;
+				}
 			}
 			&.active {
 				background-color: $dark-grey;
@@ -96,37 +137,98 @@
 		background-color: $dark-grey;
 		color: $white;
 		position: absolute;
-	    top: 150px;
+	    top: 75px;
 	    right: 0;
 	    left: 0;
 	    visibility: hidden;
 	    transition: all 0.5s ease;
 	    transform: translateY(-275px);
 	    z-index: 50;
-    	padding: 40px 0;
+    	padding: 20px 0;
+    	@media (min-width: 768px){
+			top: 150px;
+			padding: 40px 0;
+		}
+		@media (max-width: 767px){
+			nav {
+				padding:0 32px;
+				ul {
+					li {
+						a {
+							display: block;
+							border-bottom: 1px solid $white;
+							padding: 10px 0;
+							padding-left: 10px;
+						}
+						&.have-sub-menu {
+							position: relative;
+							&::before {
+								content:"\f078";
+								font: normal normal normal 14px/1 FontAwesome;
+								position: absolute;
+								top: 16px;
+    							right: 20px;
+    							@include transition(rotate 0.3s);
+							}
+							.sub-menu {
+								padding: 0;
+								padding-left: 30px;
+    							padding-bottom: 10px;
+							}
+						}
+						&.show-sub-menu {
+							&::before {
+								@include rotate(-180deg);
+							}
+						}
+					}
+				}
+			}
+		}
 		&.show {
 			display: block;
 		}
-		nav:nth-child(1) {
-			@include span(3,false);
-			padding-left: 40px;
+		.hidden-desktop {
+			@media (min-width: 768px){
+				display: none;
+			}
 		}
-		nav:nth-child(2) {
-			@include span(7,false);
-			padding-left: 40px;
-			max-width: 665px;
+		@media (min-width: 768px){
+			.have-sub-menu:nth-child(1) {
+				@include span(3,false);
+				padding-left: 40px;
+			}
+			.have-sub-menu:nth-child(2) {
+				@include span(7,false);
+				padding-left: 40px;
+				max-width: 665px;
+			}
 		}
 		.connect {
-			@include span(2,false);
-			text-align: center;
+			padding:0 32px;
+			@media (min-width: 768px){
+				@include span(2,false);
+				padding: 0;
+				text-align: center;
+			}
 			a {
-				display: block;
+				display: inline-block;
+				width: 50%;
+				float: left;
 				text-align: center;
 				color: $white;
 				font-size: 18px;
 				padding-top: 10px;
+				@media (min-width: 768px){
+					display: block;
+					float: none;
+					width: auto;
+				}
 			}
 			.fa-user {
+				@media (max-width: 767px){
+					display: none;
+				}
 				border-radius: 50%;
 				border: 2px solid white;
 				width: 120px;
@@ -135,7 +237,7 @@
 				position: relative;
 				background-color: $light-greywhite-two;
 				overflow: hidden;
-				&:before {
+				&::before {
 					position:absolute;
 					left: 0;
 					right: 0;
@@ -145,10 +247,21 @@
 				}
 			}
 		}
-		h4 {
-			font-size: 20px;
+		.have-sub-menu {
+			font-size: 18px;
 			line-height: 1.3;
 			color:$white;
+			@media (min-width: 768px){
+				font-weight: bold;
+				font-size: 20px;
+			}
+		}
+		.sub-menu {
+			@media (max-width: 767px){
+				display: none;
+			}
+			font-weight: normal;
+			padding-top: 20px;
 		}
 		.item {
 			a {
