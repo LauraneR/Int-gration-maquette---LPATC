@@ -1,27 +1,65 @@
 .last-new-article {
-	@include span(7,false);
 	background-color: white;
 	padding: 30px 0;
+	position: relative;
+	@media (min-width: 768px){
+		@include span(7,false);
+	}
 	.last-new-title {
 		padding:0 30px;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
+		margin-top: 144px;
+		@media (min-width: 768px){
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
 	}
 	.last-new-wrap {
 		width: 100%;
-		@include flexbox;
+		@media (min-width: 768px){
+			@include flexbox;
+		}
 		.last-new-img {
-			@include col(4);
 			background: url('../img/livres.jpg');
 			background-size: cover;
+			position: absolute;
+			height: 160px;
+			top: 0;
+			right: 0;
+			left: 0;
+			&::before {
+			    content: '';
+			    position: absolute;
+			    width: 0;
+			    height: 0;
+			    border-style: solid;
+			    border-width: 0 20px 18px 20px;
+			    border-color: transparent transparent #ffffff transparent;
+			    bottom: 0;
+			    left: 25px;
+			}
+			@media (min-width: 768px){
+				@include col(4);
+				position:relative;
+				height: auto;
+				&::before {
+					content: none;
+				}
+			}
 		}
 		.last-new-content {
-			@include col(8);
 			padding-top: 8px;
+			@media (min-width: 768px){
+				@include col(8);
+			}
 			p {
 				padding:0 30px;
 			}
 			.wrap-link {
-				padding:15px 30px 40px 30px;
+				padding:15px 30px 0px 30px;
+				@media (min-width: 768px){
+					padding:15px 30px 40px 30px;
+				}
 				.to-right {
 					float: right;
 				}
@@ -31,14 +69,32 @@
 }
 
 .all-article {
-	@include span(8,false);
-	#all-article-title {margin-bottom: 24px;}
+	@media (min-width: 768px){
+		@include span(8,false);
+	}
+	#all-article-title {
+		margin-bottom: 24px;
+		@media (max-width: 767px){ 
+			padding: 0 34px;
+		}
+	}
 	article {
-		@include span(6,false);
 		margin-bottom: 30px;
+		@media (min-width: 587px){
+			@include span(6,false);
+			&:nth-child(even) .article{
+				margin-left: 15px;
+			}
+			&:nth-child(odd) .article{
+				margin-right: 15px;
+			}
+		}
 		.article {
-			margin-right: 30px;
 			background-color: white;
+			@media (min-width: 768px){
+				margin-right: 30px !important;
+				margin-left: 0 !important;
+			}
 			.article-img {
 				display: inline-block;
 				background:url('../img/immeuble.jpg');
@@ -71,30 +127,40 @@
 			}
 		}
 	}
-	article:nth-child(2) {
-		@include span(12,false);
-		.article {
-			@include flexbox;
-			.article-img {
-				@include span(6,false);
-				&::before {
-					border-width: 20px 18px 20px 0;
-					border-color: transparent #ffffff transparent transparent;
-					top: 25px;
-					right: 0px;
-					left: auto;
+	@media (min-width: 587px){
+		article:nth-child(2) {
+			@include span(12,false);
+			.article {
+				margin-left: 0;
+				@include flexbox;
+				.article-img {
+					@include span(6,false);
+					&::before {
+						border-width: 20px 18px 20px 0;
+						border-color: transparent #ffffff transparent transparent;
+						top: 25px;
+						right: 0px;
+						left: auto;
+					}
 				}
-			}
-			.article-contain {
-				@include span(6,false);
+				.article-contain {
+					@include span(6,false);
+				}
 			}
 		}
 	}
 }
 
 .all-comment {
-	@include span(4,false);
-	#all-comment-title {margin-bottom: 24px;}
+	@media (min-width: 768px){
+		@include span(4,false);
+	}
+	#all-comment-title {
+		margin-bottom: 24px;
+		@media (max-width: 767px){ 
+			padding: 0 34px;
+		}
+	}
 	.comment {
 		padding: 30px;
 		margin-bottom: 30px;

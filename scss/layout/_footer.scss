@@ -7,8 +7,13 @@
 		@include container;
 		margin:auto;
 		.footer-menu {
-			@include span(4,false);
 			text-align: center;
+			@media (min-width: 587px){
+				@include span(6,false);
+			}
+			@media (min-width: 768px){
+				@include span(4,false);
+			}
 			.archi-wiki-logo-white {
 				max-width: 190px;
 				margin-top: 30px;
@@ -28,8 +33,13 @@
 			}
 		}
 		.footer-partner {
-			@include span(4,false);
 			text-align: center;
+			@media (min-width: 587px){
+				@include span(6,false);
+			}
+			@media (min-width: 768px){
+				@include span(4,false);
+			}
 			h5 {
 				font-size: 16px;
 				line-height: 1.31;
@@ -41,9 +51,16 @@
 			}
 		}
 		.footer-social-networks {
-			@include span(4,false);
 			text-align: center;
-			margin-top: 40px; 
+			margin-top: 20px;
+			@media (min-width: 587px){
+			    display: inline-block;
+			    width: 100%;
+			}
+			@media (min-width: 768px){
+				@include span(4,false);
+				margin-top: 40px;
+			} 
 			.link-network {
 				width: 211px;
   				border: 2px solid white;

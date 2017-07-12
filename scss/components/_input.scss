@@ -1,8 +1,12 @@
 input {
-	width: 562px;
+	width: 100%;
+	max-width: 562px;
 	height: 43.3px;
 	border: solid 2px $dark-peach;
 	background-color: $white;
+	@media (min-width: 768px){
+		width: 562px;
+	}
 	@include placeholder {
 	    font-style:italic;
 	    color: $more-dark-grey;
@@ -10,13 +14,21 @@ input {
 	}
 }
 button {
-	position: relative;
-    top: 3.2px;
+	position: absolute;
+	right: 30px;
+	top: 0;
     width: 62px;
     height: 49.3px;
 	border: solid 2px $dark-peach;
+	border-left:none;
 	background-color: $white;
 	margin-left: -6px;
+	@media (min-width: 768px){
+		position: relative;
+    	top: 3.2px;
+    	right: 0;
+    	border-left:solid 2px $dark-peach;
+	}
 	.fa-search {
 		font-size: 25px;
 		color:$charcoal-grey;

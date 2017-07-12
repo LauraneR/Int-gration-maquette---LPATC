@@ -1,13 +1,21 @@
 @mixin fontTitle1 {
-	font-size:31px;
-	line-height: 40px;
+	font-size: 18px;
+	line-height: 1.22;
 	color: $charcoal-grey;
+	@media (min-width: 768px){
+		font-size:31px;
+		line-height: 40px;
+	}
 }
 
 @mixin fontTitle2 {
-	font-size:25px;
-	line-height: 33px;
+	font-size: 18px;
+	line-height: 1.22;
 	color: $charcoal-grey;
+	@media (min-width: 768px){
+		font-size:25px;
+		line-height: 33px;
+	}
 }
 
 @mixin fontTitle3 {
@@ -17,7 +25,11 @@
 }
 
 @mixin fontP1 {
-	font-size:16px;
-	line-height: 24px;
+	font-size:14px;
+	line-height: 1.43;
 	color: $black;
+	@media (min-width: 768px){
+		font-size:16px;
+		line-height: 24px;
+	}
 }

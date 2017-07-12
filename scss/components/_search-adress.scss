@@ -1,20 +1,38 @@
 .content-search-nav {
 	background-color: $dark-red;
-	.search-nav-title {
+	.search-nav-title {		
+		@media (max-width: 767px){
+			padding: 0 34px;
+			padding-top: 30px;
+		} 
 		color: $light-greywhite-two;
-  		font-size: 25px !important;
+  		font-size: 18px !important;
   		text-align: center !important;
   		padding-top: 30px;
 		margin-bottom: 10px;
+		@media (min-width: 768px){
+			font-size: 25px !important;
+		}
 	}
 	form {
+		@media (max-width: 767px){
+			padding: 0 34px;
+			padding-bottom: 30px;
+		} 
+		position: relative;
 		text-align: center !important;
 		padding-bottom: 40px;
+		@media (min-width: 992px){
+			padding-left: 14%;
+		}
 		.search-more {
-			display: inline-block;
+			display: none;
 			color: $white;
 			text-decoration: underline;
 			padding-left: 30px;
+			@media (min-width: 768px){
+				display: inline-block;
+			}
 		}
 	}
 }
