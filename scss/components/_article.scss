@@ -9,14 +9,14 @@
 		padding:0 30px;
 		margin-bottom: 10px;
 		margin-top: 144px;
-		@media (min-width: 768px){
+		@media (min-width: 1080px){
 			margin-top: 0;
 			margin-bottom: 30px;
 		}
 	}
 	.last-new-wrap {
 		width: 100%;
-		@media (min-width: 768px){
+		@media (min-width: 1080px){
 			@include flexbox;
 		}
 		.last-new-img {
@@ -38,7 +38,7 @@
 			    bottom: 0;
 			    left: 25px;
 			}
-			@media (min-width: 768px){
+			@media (min-width: 1080px){
 				@include col(4);
 				position:relative;
 				height: auto;
@@ -49,7 +49,7 @@
 		}
 		.last-new-content {
 			padding-top: 8px;
-			@media (min-width: 768px){
+			@media (min-width: 1080px){
 				@include col(8);
 			}
 			p {
