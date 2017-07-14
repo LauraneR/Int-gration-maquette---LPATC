@@ -384,36 +384,34 @@ button {
     .burger {
       background: #455763;
       height: 5px; } }
-
-.burger::before {
-  position: absolute;
-  background: #fafafa;
-  width: 20px;
-  height: 2.5px;
-  top: 8px;
-  content: "";
-  display: block; }
-  @media (min-width: 768px) {
-    .burger::before {
-      background: #455763;
-      width: 40px;
-      height: 5px;
-      top: 12px; } }
-
-.burger::after {
-  position: absolute;
-  background: #fafafa;
-  width: 20px;
-  height: 2.5px;
-  bottom: 8px;
-  content: "";
-  display: block; }
-  @media (min-width: 768px) {
-    .burger::after {
-      background: #455763;
-      width: 40px;
-      height: 5px;
-      bottom: 12px; } }
+  .burger::before {
+    position: absolute;
+    background: #fafafa;
+    width: 20px;
+    height: 2.5px;
+    top: 8px;
+    content: "";
+    display: block; }
+    @media (min-width: 768px) {
+      .burger::before {
+        background: #455763;
+        width: 40px;
+        height: 5px;
+        top: 12px; } }
+  .burger::after {
+    position: absolute;
+    background: #fafafa;
+    width: 20px;
+    height: 2.5px;
+    bottom: 8px;
+    content: "";
+    display: block; }
+    @media (min-width: 768px) {
+      .burger::after {
+        background: #455763;
+        width: 40px;
+        height: 5px;
+        bottom: 12px; } }
 
 .burger::after, .burger::before, .burger {
   -moz-transition: all 0.3s ease-in-out;

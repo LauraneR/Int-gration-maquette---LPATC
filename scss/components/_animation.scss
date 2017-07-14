@@ -27,53 +27,57 @@
     background: $dark-grey;
     height: 5px;
   }
-}
-.burger::before {
-  position: absolute;
-  background: $white;
-  width: 20px;
-  height: 2.5px;
-  top: 8px;
-  content: "";
-  display: block;
-  @media (min-width: 768px){
-    background: $dark-grey;
-    width: 40px;
-    height: 5px;
-    top: 12px;
+  &::before {
+    position: absolute;
+    background: $white;
+    width: 20px;
+    height: 2.5px;
+    top: 8px;
+    content: "";
+    display: block;
+    @media (min-width: 768px){
+      background: $dark-grey;
+      width: 40px;
+      height: 5px;
+      top: 12px;
+    }
+  }
+  &::after {
+    position: absolute;
+    background: $white;
+    width: 20px;
+    height: 2.5px;
+    bottom: 8px;
+    content: "";
+    display: block;
+    @media (min-width: 768px){
+      background: $dark-grey;
+      width: 40px;
+      height: 5px;
+      bottom: 12px;
+    }
   }
 }
-.burger::after {
-  position: absolute;
-  background: $white;
-  width: 20px;
-  height: 2.5px;
-  bottom: 8px;
-  content: "";
-  display: block;
-  @media (min-width: 768px){
-    background: $dark-grey;
-    width: 40px;
-    height: 5px;
-    bottom: 12px;
-  }
-}
+
 .burger::after, .burger::before, .burger {
   @include transition(all .3s ease-in-out);
 }
 .more-menu.active .burger-menu .burger{
    background: $dark-grey;
 }
-.more-menu.active .burger-menu .burger::after{
-   @include transform(rotate(-45deg));
-  	bottom: 0px;
-   background: white;
+.more-menu.active .burger-menu .burger{
+  &::after{
+    @include transform(rotate(-45deg));
+    bottom: 0px;
+    background: white;
+  }
+  &::before{
+    @include transform(rotate(45deg));
+    top: 0px;
+    background: white;
+  }
 }
-.more-menu.active .burger-menu .burger::before{
-   @include transform(rotate(45deg));
-  top: 0px;
-  background: white;
-}
+
 
 /* ANIME MENU */ 
 .navigation .content-more-menu.show {
